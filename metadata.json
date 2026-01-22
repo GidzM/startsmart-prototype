@@ -1,0 +1,8 @@
+{
+  "name": "StartSmart Property",
+  "description": "Professional real estate investment platform. Master the property market with expert-led courses, ROI calculators, and personalized roadmaps.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
