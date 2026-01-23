@@ -139,8 +139,8 @@ const Assistant: React.FC = () => {
 
     try {
       console.log('API Key:', import.meta.env.VITE_API_KEY); // Debug line
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
-      const response = await ai.models.generateContent({
+      const ai = new GoogleGenAI({   apiKey: import.meta.env.VITE_GEMINI_API_KEY});
+      const response = await ai.models.generateContent({  
         model: 'gemini-3-flash-preview',
         contents: text,
         config: {

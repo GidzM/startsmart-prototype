@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
 
       setLoadingTip(true);
       try {
-        const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+      const ai = new GoogleGenAI({   apiKey: import.meta.env.VITE_GEMINI_API_KEY});
         const response = await ai.models.generateContent({
           model: 'gemini-3-flash-preview',
           contents: "Generate a short, practical, 2-sentence Dubai property investment market tip for 2026. Mention areas like Business Bay, JVC, or Dubai Hills. Format as JSON with 'title' and 'content' keys.",
