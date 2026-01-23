@@ -118,13 +118,13 @@ const Library: React.FC = () => {
               </form>
             ) : (
               <>
-                <h3 className="text-2xl font-bold tracking-tight mb-1">{user?.name}</h3>
+                <h3 className="text-2xl font-bold tracking-tight mb-1 text-gray-900 dark:text-white">{user?.name}</h3>
                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-8">{user?.email}</p>
                 
                 <div className="w-full grid grid-cols-2 gap-4 pt-8 border-t border-gray-100 dark:border-gray-800">
                   <div>
                     <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Joined</p>
-                    <p className="text-sm font-bold">2024</p>
+                    <p className="text-sm font-bold text-gray-900 dark:text-white">2024</p>
                   </div>
                   <div>
                     <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Status</p>
