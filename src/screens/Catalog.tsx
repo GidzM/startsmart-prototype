@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { POPULAR_COURSES } from '../constants';
@@ -16,7 +15,7 @@ const Catalog: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 pb-40 no-scrollbar">
       <header className="mb-10">
         <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1">Learning Academy</p>
-        <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Course Catalog</h1>
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">Course Catalog</h1>
       </header>
 
       <div className="mb-10 flex flex-col md:flex-row gap-6 md:items-center justify-between">
@@ -28,7 +27,7 @@ const Catalog: React.FC = () => {
               className={`px-8 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
                 activeCategory === cat 
                   ? 'bg-primary text-black shadow-lg shadow-primary/20 scale-105' 
-                  : 'bg-white dark:bg-card-dark border border-gray-100 dark:border-gray-800 text-gray-500 hover:bg-gray-50'
+                  : 'bg-white dark:bg-card-dark border border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
               }`}
             >
               {cat}
@@ -38,7 +37,7 @@ const Catalog: React.FC = () => {
         <div className="relative group max-w-sm w-full">
            <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">search</span>
            <input 
-             className="w-full bg-white dark:bg-card-dark border border-gray-100 dark:border-gray-800 rounded-xl py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-bold"
+             className="w-full bg-white dark:bg-card-dark border border-gray-100 dark:border-gray-800 rounded-xl py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-bold text-gray-900 dark:text-white placeholder:text-gray-400"
              placeholder="Search by topic..."
            />
         </div>
@@ -59,7 +58,7 @@ const Catalog: React.FC = () => {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">{course.tag}</p>
-                <h4 className="text-xl font-bold tracking-tight leading-tight mb-4 group-hover:text-primary transition-colors">{course.title}</h4>
+                <h4 className="text-xl font-bold tracking-tight leading-tight mb-4 group-hover:text-primary transition-colors text-gray-900 dark:text-white">{course.title}</h4>
                 <div className="flex items-center gap-4 text-[10px] font-bold uppercase text-gray-400 mb-8">
                   <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">schedule</span> {course.duration}</span>
                   <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">menu_book</span> {course.lessonCount} lessons</span>
@@ -72,14 +71,14 @@ const Catalog: React.FC = () => {
                         <div className="h-full bg-primary shadow-[0_0_8px_rgba(19,236,91,0.5)]" style={{ width: `${course.progress}%` }}></div>
                       </div>
                       <div className="flex items-center justify-between">
-                         <span className="text-[10px] font-bold uppercase text-gray-500">{course.progress}% done</span>
+                         <span className="text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">{course.progress}% done</span>
                          <button onClick={() => navigate(`/lesson/${course.id}`)} className="text-primary text-[10px] font-bold uppercase tracking-widest border-b-2 border-primary">Continue</button>
                       </div>
                     </div>
                   ) : (
                     <button 
                       onClick={() => navigate(`/lesson/${course.id}`)}
-                      className="w-full py-4 bg-gray-50 dark:bg-gray-800 hover:bg-primary hover:text-black rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all shadow-inner flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-black"
+                      className="w-full py-4 bg-gray-50 dark:bg-gray-800 hover:bg-primary hover:text-black rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all shadow-inner flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-black text-gray-900 dark:text-white"
                     >
                       Start module <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </button>

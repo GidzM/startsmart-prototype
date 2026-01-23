@@ -43,9 +43,8 @@ const Navigation = () => {
           <div className="size-8 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
             <span className="material-symbols-outlined text-black text-xl font-black">real_estate_agent</span>
           </div>
-          <h2 className="text-xl font-bold tracking-tighter">StartSmart</h2>
+          <h2 className="text-xl font-bold tracking-tighter text-gray-900 dark:text-white">StartSmart</h2>
         </div>
-        
         <nav className="flex flex-col gap-2">
           {navItems.map((item) => (
             <button
@@ -69,7 +68,7 @@ const Navigation = () => {
           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Market Status</p>
           <div className="flex items-center gap-2 mb-1">
             <span className="size-2 bg-primary rounded-full animate-pulse"></span>
-            <span className="text-xs font-bold">Dubai 2026 Pulse Active</span>
+            <span className="text-xs font-bold text-gray-900 dark:text-white">Dubai 2026 Pulse Active</span>
           </div>
           <p className="text-[8px] font-medium text-gray-400">Grounded in 2026 Supply Forecasts</p>
         </div>

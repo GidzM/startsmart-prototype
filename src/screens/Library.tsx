@@ -43,9 +43,9 @@ const Library: React.FC = () => {
       <header className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1">Portfolio Account</p>
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Investor Profile</h1>
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">Investor Profile</h1>
         </div>
-               <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <button 
             onClick={() => setIsEditing(!isEditing)}
             className="px-6 py-3 rounded-xl border border-gray-200 dark:border-gray-800 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2 text-gray-900 dark:text-white"
@@ -83,10 +83,10 @@ const Library: React.FC = () => {
             
             {isEditing ? (
               <form onSubmit={handleSaveProfile} className="w-full space-y-4 text-left">
-                <div>
+                     <div>
                   <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1">Full Name</label>
                   <input 
-                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold"
+                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold text-gray-900 dark:text-white"
                     value={editName}
                     onChange={(e) => setEditName(e.target.value)}
                   />
@@ -94,7 +94,7 @@ const Library: React.FC = () => {
                 <div>
                   <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1">Email Address</label>
                   <input 
-                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold"
+                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold text-gray-900 dark:text-white"
                     value={editEmail}
                     onChange={(e) => setEditEmail(e.target.value)}
                   />
@@ -104,7 +104,7 @@ const Library: React.FC = () => {
                   <input 
                     type="password"
                     placeholder="••••••••"
-                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold"
+                    className="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-3 text-sm font-bold text-gray-900 dark:text-white placeholder:text-gray-400"
                     value={editPassword}
                     onChange={(e) => setEditPassword(e.target.value)}
                   />
@@ -136,7 +136,7 @@ const Library: React.FC = () => {
           </section>
 
           <section className="bg-primary/5 dark:bg-[#1a2e20] p-8 rounded-2xl border border-primary/20 shadow-sm">
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
               <span className="material-symbols-outlined text-primary">verified</span>
               Certification
             </h4>
@@ -152,7 +152,7 @@ const Library: React.FC = () => {
         {/* Main Content Area */}
         <div className="lg:col-span-8 space-y-10 no-scrollbar">
           <section>
-            <h3 className="text-lg font-bold uppercase tracking-widest mb-8 opacity-40">My Active Tracks</h3>
+            <h3 className="text-lg font-bold uppercase tracking-widest mb-8 opacity-40 text-gray-900 dark:text-white">My Active Tracks</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 no-scrollbar">
               {TRACKS.map((track) => {
                 const progress = user?.progress?.[track.id] || 0;
@@ -168,8 +168,7 @@ const Library: React.FC = () => {
                         {track.category}
                       </span>
                     </div>
-                    
-                    <h4 className="text-xl font-bold tracking-tight mb-2 leading-tight">{track.title}</h4>
+                    <h4 className="text-xl font-bold tracking-tight mb-2 leading-tight text-gray-900 dark:text-white">{track.title}</h4>
                     <p className="text-xs text-gray-400 font-medium mb-8 line-clamp-2">{track.description}</p>
                     
                     <div className="mt-auto space-y-4">
@@ -182,7 +181,7 @@ const Library: React.FC = () => {
                       </div>
                       <button 
                         onClick={() => navigate(`/roadmap/${track.id}`)}
-                        className="w-full py-4 bg-gray-50 dark:bg-gray-800 hover:bg-primary hover:text-black rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 mt-4"
+                        className="w-full py-4 bg-gray-50 dark:bg-gray-800 hover:bg-primary hover:text-black rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 mt-4 text-gray-900 dark:text-white"
                       >
                         {progress === 0 ? 'Initialize' : 'Resume'} <span className="material-symbols-outlined text-sm">arrow_forward</span>
                       </button>

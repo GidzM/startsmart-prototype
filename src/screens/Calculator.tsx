@@ -73,23 +73,20 @@ const Calculator: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 pb-40 transition-all no-scrollbar">
-      <header className="mb-10 flex items-center justify-between">
+ <header className="mb-10 flex items-center justify-between">
         <div>
           <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1">Dubai Real Estate 2026</p>
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">Deal Analyzer</h1>
-		 
-																			   
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">Deal Analyzer</h1>
         </div>
-        <button onClick={() => navigate(-1)} className="md:hidden size-10 bg-white dark:bg-card-dark rounded-full flex items-center justify-center shadow-sm">
+        <button onClick={() => navigate(-1)} className="md:hidden size-10 bg-white dark:bg-card-dark rounded-full flex items-center justify-center shadow-sm text-gray-900 dark:text-white">
           <span className="material-symbols-outlined">close</span>
         </button>
       </header>
-
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Side: Inputs */}
         <div className="lg:col-span-7 space-y-12 no-scrollbar">
-          <section>
-            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40">Acquisition Profile</h3>
+ <section>
+            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40 text-gray-900 dark:text-white">Acquisition Profile</h3>
             <div className="bg-white dark:bg-card-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-8">
                <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -114,23 +111,19 @@ const Calculator: React.FC = () => {
                   value={purchasePrice}
                   onChange={(e) => setPurchasePrice(Number(e.target.value))}
                 />					
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                   <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
                     <p className="text-[9px] font-bold uppercase text-gray-400 mb-1">DLD Fee (4%)</p>
-                    <p className="font-bold">AED {results.dldFee.toLocaleString()}</p>
+                    <p className="font-bold text-gray-900 dark:text-white">AED {results.dldFee.toLocaleString()}</p>
                   </div>
                   <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
                     <p className="text-[9px] font-bold uppercase text-gray-400 mb-1">Agency (2%)</p>
-                    <p className="font-bold">AED {results.agencyFee.toLocaleString()}</p>
+                    <p className="font-bold text-gray-900 dark:text-white">AED {results.agencyFee.toLocaleString()}</p>
                   </div>
-                </div>
               </div>
             </div>
           </section>
-			  
-
           <section>
-            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40">Operational Stats</h3>
+            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40 text-gray-900 dark:text-white">Operational Stats</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
              <label className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Internal Size (SqFt)</p>
@@ -172,7 +165,7 @@ const Calculator: React.FC = () => {
 			  
 
           <section>
-            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40">Financing</h3>
+            <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40 text-gray-900 dark:text-white">Financing</h3>
             <div className="bg-white dark:bg-card-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 space-y-8">
                <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -242,10 +235,7 @@ const Calculator: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-card-dark p-8 rounded-2xl border border-gray-100 dark:border-gray-800">
-					   
-										  
-            <h5 className="font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
-				
+            <h5 className="font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
               <span className="size-2 bg-yellow-500 rounded-full"></span> 
               SME Warning
             </h5>

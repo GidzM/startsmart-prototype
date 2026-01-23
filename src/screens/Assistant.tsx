@@ -120,18 +120,6 @@ const Assistant: React.FC = () => {
     }
     setLastRequestTime(now);
 
-															  
-						   
-													   
-									  
-									  
-						   
-																			 
-		  
-			 
-	 
-							
-
     const userMessage: Message = { id: Date.now().toString(), role: 'user', content: text };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
@@ -193,24 +181,23 @@ const Assistant: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-white dark:bg-background-dark overflow-hidden relative no-scrollbar">
-      <header className="flex items-center justify-between p-4 md:p-6 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-[110]">
+            <header className="flex items-center justify-between p-4 md:p-6 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-[110]">
         <div className="flex items-center gap-3 md:gap-4">
           <div className="size-10 md:size-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary shadow-inner">
             <span className="material-symbols-outlined text-2xl md:text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>smart_toy</span>
           </div>
           <div>
-            <h2 className="text-lg md:text-xl font-bold tracking-tighter">AI Strategist</h2>
+            <h2 className="text-lg md:text-xl font-bold tracking-tighter text-gray-900 dark:text-white">AI Strategist</h2>
             <div className="flex items-center gap-1.5">
               <span className="size-1.5 bg-primary rounded-full animate-pulse"></span>
-              <span className="text-[8px] md:text-[10px] font-bold uppercase text-gray-500 tracking-widest">Live 2026 Pulse</span>
+              <span className="text-[8px] md:text-[10px] font-bold uppercase text-gray-400 tracking-widest">Live 2026 Pulse</span>
             </div>
           </div>
         </div>
-        <button onClick={() => navigate('/dashboard')} className="md:hidden size-10 bg-gray-50 dark:bg-gray-800 rounded-full flex items-center justify-center">
+        <button onClick={() => navigate('/dashboard')} className="md:hidden size-10 bg-gray-50 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-900 dark:text-white">
           <span className="material-symbols-outlined">close</span>
         </button>
       </header>
-
       <main ref={scrollRef} className="flex-1 overflow-y-auto p-4 md:p-10 space-y-12 pb-80 md:pb-64 no-scrollbar scroll-smooth max-w-5xl mx-auto w-full z-[50]">
         {messages.map((msg) => (
           <div key={msg.id} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
