@@ -91,13 +91,13 @@ const Calculator: React.FC = () => {
           <section>
             <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40">Acquisition Profile</h3>
             <div className="bg-white dark:bg-card-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-8">
-              <div className="space-y-4">
+               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                    <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Renovation Budget (AED)</p>
                    <span className="material-symbols-outlined text-primary">construction</span>
                 </div>
                 <input 
-                  className="w-full bg-transparent border-none p-0 text-3xl md:text-4xl font-bold focus:ring-0 text-[#111813] dark:text-white" 
+                  className="w-full bg-transparent border-none p-0 text-3xl md:text-4xl font-bold focus:ring-0 text-gray-900 dark:text-white" 
                   type="number" 
                   value={renovation}
                   onChange={(e) => setRenovation(Number(e.target.value))}
@@ -106,19 +106,14 @@ const Calculator: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                    <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Purchase Price (AED)</p>
-																						
                    <span className="material-symbols-outlined text-primary">verified_user</span>
-					 
                 </div>
-					
-										
                 <input 
-                  className="w-full bg-transparent border-none p-0 text-4xl md:text-5xl font-bold focus:ring-0 text-[#111813] dark:text-white" 
+                  className="w-full bg-transparent border-none p-0 text-4xl md:text-5xl font-bold focus:ring-0 text-gray-900 dark:text-white" 
                   type="number" 
                   value={purchasePrice}
                   onChange={(e) => setPurchasePrice(Number(e.target.value))}
-                />
-					
+                />					
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                   <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
                     <p className="text-[9px] font-bold uppercase text-gray-400 mb-1">DLD Fee (4%)</p>
@@ -137,10 +132,10 @@ const Calculator: React.FC = () => {
           <section>
             <h3 className="text-lg font-bold uppercase tracking-widest mb-6 opacity-40">Operational Stats</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <label className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
+             <label className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Internal Size (SqFt)</p>
                 <input 
-                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0" 
+                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0 text-gray-900 dark:text-white" 
                   value={propertySize}
                   onChange={(e) => setPropertySize(Number(e.target.value))}
                 />
@@ -148,7 +143,7 @@ const Calculator: React.FC = () => {
               <label className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Service Charge / SqFt</p>
                 <input 
-                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0" 
+                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0 text-gray-900 dark:text-white" 
                   value={serviceChargePerSqFt}
                   onChange={(e) => setServiceChargePerSqFt(Number(e.target.value))}
                 />
@@ -156,7 +151,7 @@ const Calculator: React.FC = () => {
               <label className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Other Expenses (AED/mo)</p>
                 <input 
-                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0" 
+                  className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0 text-gray-900 dark:text-white" 
                   value={otherExpenses}
                   onChange={(e) => setOtherExpenses(Number(e.target.value))}
                 />
@@ -191,13 +186,13 @@ const Calculator: React.FC = () => {
                   />
                </div>
                <div className="grid grid-cols-2 gap-8">
-                  <div className="space-y-2">
+                 <div className="space-y-2">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Interest Rate</p>
-                    <input className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} />
+                    <input className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0 text-gray-900 dark:text-white" value={interestRate} onChange={e => setInterestRate(Number(e.target.value))} />
                   </div>
                   <div className="space-y-2">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Loan Term (Yrs)</p>
-                    <input className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0" value={loanTerm} onChange={e => setLoanTerm(Number(e.target.value))} />
+                    <input className="w-full bg-transparent border-none p-0 text-2xl font-bold focus:ring-0 text-gray-900 dark:text-white" value={loanTerm} onChange={e => setLoanTerm(Number(e.target.value))} />
                   </div>
                </div>
             </div>
